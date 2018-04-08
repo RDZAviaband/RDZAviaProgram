@@ -89,3 +89,10 @@ D:\ТП\Прога\Database2\obj\Debug\Database2.Form4.resources
 C:\Users\Дмитрий\Desktop\git_exercise1\Database2\bin\Debug\Database2.exe.config
 C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.exe
 C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.pdb
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.Form2.resources
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.Form3.resources
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.Form4.resources
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache

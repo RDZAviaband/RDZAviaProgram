@@ -2,6 +2,6 @@
 {
     public class SqlQueries
     {
-        12345
+        
     }
 }
