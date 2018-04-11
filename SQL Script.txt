@@ -1,0 +1,81 @@
+drop database if exists RDZAviaDBV1.0;
+
+
+/* Создание базы данных*/
+
+
+create database RDZAviaDBV1.0; 
+
+
+/* Создание таблиц */
+
+
+create table RDZAviaDBV1.0.DataGridOne( 
+id integer primary key auto_increment, 
+Date varchar(25), 
+Whence  varchar(25), 
+Where  varchar(25), 
+Rate varchar(255),
+Price varchar(255)
+); 
+
+
+create table RDZAviaDBV1.0.Where( 
+id integer primary key auto_increment, 
+Price_ varchar(70)
+);
+
+
+create table RDZAviaDBV1.0.DataGridOne_Where( 
+id_DataGridOne integer, 
+id_Where integer,
+primary key (id_DataGridOne,id_Where) 
+); 
+
+/*
+create table RDZAviaDBV1.0.DataGridSecond( 
+id integer primary key auto_increment,
+Where  varchar(25),
+Whence  varchar(25),  
+Date varchar(25), 
+Price varchar(255)
+);
+
+
+create table RDZAviaDBV1.0.prog( 
+id_DataGridSecond integer, 
+id_Where integer, 
+primary key (id_DataGridSecond,id_Where) 
+);
+
+
+Alter table RDZAviaDBV1.0.prog
+add constraint fk_Where_id foreign key(id_Where) references Where(id) on delete cascade,
+add constraint fk_DataGridSecond_id foreign key(id_DataGridSecond) references DataGridSecond(id) on delete cascade;
+*/
+
+
+/* Заполнение таблицы авиабилетов */
+
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Москва','Воронеж','20 мая','Эконом-класс','от 5000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Москва','Сочи','31 мая','Премиум-класс','от 25000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Воронеж','Краснодар','3 июня','Бизнес-класс','от 40000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Санкт-Петербург','Воронеж','3 июня','Премиум-класс','от 20000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Воронеж','Владивосток','6 июня','Бизнес-класс','от 63000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Сочи','Владивосток','2 июня','Эконом-класс','от 18000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Краснодар','Новосибирск','9 мая','Эконом-класс','от 15000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Новосибирск','Воронеж','4 июня','Эконом-класс','от 45000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Владивосток','Москва','20 июля','Премиум-класс','от 35000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Владивосток','Санкт-Петербург','30 июля','Премиум-класс','от 80000 руб');
+insert into RDZAviaDBV1.0.DataGridOne(Where ,Whence ,Date, Rate, Price) values ('Симферополь (Крым)','Воронеж','1 августа','Бизнес-класс','от 38000 руб');
+
+
+
+
+
+
+
+
+
+
+
