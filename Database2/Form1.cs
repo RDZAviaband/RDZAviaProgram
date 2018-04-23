@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Database2
@@ -10,6 +12,8 @@ namespace Database2
     {
         public Form1()
         {
+
+
             InitializeComponent();
             SqlQueries queries = new SqlQueries();
         }
@@ -21,10 +25,22 @@ namespace Database2
         DataSet LibDataset = new DataSet();
         DataSet PagesDataset = new DataSet();
         MySqlConnection connection = new MySqlConnection(SqlQueries.connectQuery);
-       
+
+
+
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            Otkyda.Items.Add("Воронеж");
+            Otkyda.Items.Add("Москва");
+            Kuda.Items.Add("Москва");
+            Kuda.Items.Add("Сочи");
+            Kuda.Items.Add("Владивосток");
+            Tarif.Items.Add("Эконом-класс");
+            Tarif.Items.Add("Бизнес-класс");
+            Tarif.Items.Add("Премиум-класс");
+
+
             try
             {
                 RDZAviaLoad();
@@ -40,7 +56,7 @@ namespace Database2
             }
         }
 
-       private void RDZAviaLoad()
+        private void RDZAviaLoad()
         {
             RDZAviaDataset.Clear();
             RDZAviaAdapter = new MySqlDataAdapter(SqlQueries.SSQuery, connection);
@@ -61,43 +77,12 @@ namespace Database2
             //connection.Close();
         }
 
-        public void PagesLoad()
-        {
-            connection.Open();
-            label1.Text = (SqlQueries.page + 1).ToString();
-            PagesDataset.Clear();
-            //PagesAdapter = new MySqlDataAdapter(string.Format(SqlQueries.PagesQuery, SqlQueries.page, numericUpDown1.Value), connection);
-            MySqlCommandBuilder PagesBuilder = new MySqlCommandBuilder(PagesAdapter);
-            PagesAdapter.Fill(PagesDataset);
 
-       
-       
 
-            connection.Close();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PagesLoad();
-        }
 
-        private void PrevButton_Click(object sender, EventArgs e)
-        {
-            if (SqlQueries.page != 0)
-            {
-                SqlQueries.page--;
-                PagesLoad();
-            }
-        }
 
-        //private void NextButton_Click(object sender, EventArgs e)
-        //{
-        //    if (SqlQueries.page <= (RDZAviaNumber-1) / numericUpDown1.Value - 1 )
-        //    {
-        //        SqlQueries.page++;
-        //        PagesLoad();
-        //    }
-        //}
+
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
@@ -118,8 +103,8 @@ namespace Database2
             try
             {
                 MySqlCommand addcommand = new MySqlCommand(SqlQueries.insertQuery, connection);
-                addcommand.Parameters.AddWithValue("l", textBox6.Text);
-                addcommand.Parameters.AddWithValue("w", textBox7.Text);
+                //addcommand.Parameters.AddWithValue("l", textBox6.Text);
+                //addcommand.Parameters.AddWithValue("w", textBox7.Text);
                 //addcommand.Parameters.AddWithValue("a", textBox8.Text);
                 //addcommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
                 await addcommand.ExecuteNonQueryAsync();
@@ -127,7 +112,7 @@ namespace Database2
                 Form1_Load(sender, e);
                 connection.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
@@ -142,31 +127,12 @@ namespace Database2
             RDZAviaDataset.RejectChanges();
         }
 
-        //private void Search_Click(object sender, EventArgs e)
-        //{
-        //    if (SearchTextBox.Text != string.Empty)
-        //    {
-        //        ClearSearchResults();
-        //        for (int row = 0; row < dataGridView1.Rows.Count - 1; row++)
-        //        {
-        //            for (int cell = 1; cell < 2; cell++)
-        //            {
-        //                if (dataGridView1.Rows[row].Cells[cell].Value.ToString().ToLower().Contains(SearchTextBox.Text.ToLower()))
-        //                    dataGridView1.Rows[row].DefaultCellStyle.BackColor = Color.Red;
-        //            }
-        //        }
-        //        //SearchTextBox.Clear();
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Empty field!");
-        //    }
-        //}
+
 
         //private void Search2_Click(object sender, EventArgs e)
         //{
         //    //if (SearchTextBox2.Text != string.Empty)
-            
+
         //        ClearSearchResults();
         //        for (int row = 0; row < dataGridView2.Rows.Count; row++)
         //        {
@@ -177,28 +143,25 @@ namespace Database2
         //            }
         //        }
         //        //SearchTextBox2.Clear();
-         
+
         //    else
         //    {
         //        MessageBox.Show("Empty field!");
         //    }
         //}
 
-        //private void ClearSearchResults()
-        //{
-        //    foreach (DataGridViewRow row in dataGridView1.Rows)
-        //    {
-        //        row.DefaultCellStyle.BackColor = Color.White;
-        //    }
-        //    foreach (DataGridViewRow row in dataGridView2.Rows)
-        //    {
-        //        row.DefaultCellStyle.BackColor = Color.White;
-        //    }
-        //}
+        private void ClearSearchResults()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.White;
+            }
+
+        }
 
         //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         //{
-        //    //SearchTextBox.Clear();
+        //    textBox6.Clear();
         //    ClearSearchResults();
         //}
 
@@ -226,8 +189,8 @@ namespace Database2
             {
                 connection.Open();
                 MySqlCommand updatecommand = new MySqlCommand(SqlQueries.updateQuery, connection);
-                updatecommand.Parameters.AddWithValue("l", textBox6.Text);
-                updatecommand.Parameters.AddWithValue("w", textBox7.Text);
+                //updatecommand.Parameters.AddWithValue("l", textBox6.Text);
+                //updatecommand.Parameters.AddWithValue("w", textBox7.Text);
                 //updatecommand.Parameters.AddWithValue("a", textBox8.Text);
                 //updatecommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
                 //updatecommand.Parameters.AddWithValue("id", dataGridView2.CurrentCell.RowIndex + 1);
@@ -246,10 +209,10 @@ namespace Database2
             }
         }
 
-        
+
         private async void DeleteButton_Click(object sender, EventArgs e)
         {
-          
+
             Form2 frm2 = new Form2();
             frm2.Show();
             this.Hide();
@@ -278,22 +241,57 @@ namespace Database2
             Form1_Load(sender, e);
         }
 
-        private void SearchTextBox2_TextChanged(object sender, EventArgs e)
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+     
+       
+
+            
+
+        private void Search2_Click(object sender, EventArgs e) 
+        {
+            
+
+            if (Otkyda.Text != string.Empty && Kuda.Text != string.Empty  && Tarif.Text != string.Empty && dateTime.Text != string.Empty)
+            {
+                ClearSearchResults();
+                for (int row = 0; row < dataGridView1.Rows.Count - 1; row++)
+                {
+
+                    if (dataGridView1.Rows[row].Cells["Where_"].Value.ToString().ToLower().Contains(Otkyda.Text.ToLower()) &&
+                        dataGridView1.Rows[row].Cells["Whence_"].Value.ToString().ToLower().Contains(Kuda.Text.ToLower()) &&
+                        dataGridView1.Rows[row].Cells["Date_"].Value.ToString().ToLower().Contains(dateTime.Text.ToLower()) &&
+                        dataGridView1.Rows[row].Cells["Rate_"].Value.ToString().ToLower().Contains(Tarif.Text.ToLower()))
+                        dataGridView1.Rows[row].DefaultCellStyle.BackColor = Color.Red;
+                    else { MessageBox.Show("По вашему запросу билетов не найдено;("); break; }
+                    }
+                
+                
+            }
+            else
+            {
+                MessageBox.Show("Заполните все поля и повторите запрос");
+                
+            }
+
+            
+        }
+        
+    
+        
+
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -303,32 +301,12 @@ namespace Database2
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dateTime_ValueChanged(object sender, EventArgs e)
         {
 
         }
