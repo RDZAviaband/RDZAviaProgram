@@ -99,27 +99,30 @@ namespace Database2
 
         private async void AddLibButton_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            try
-            {
-                MySqlCommand addcommand = new MySqlCommand(SqlQueries.insertQuery, connection);
-                //addcommand.Parameters.AddWithValue("l", textBox6.Text);
-                //addcommand.Parameters.AddWithValue("w", textBox7.Text);
-                //addcommand.Parameters.AddWithValue("a", textBox8.Text);
-                //addcommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
-                await addcommand.ExecuteNonQueryAsync();
-                ClearAllTBs();
-                Form1_Load(sender, e);
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            Form4 frm2 = new Form4();
+            frm2.Show();
+            this.Hide();
+            //connection.Open();
+            //try
+            //{
+            //    MySqlCommand addcommand = new MySqlCommand(SqlQueries.insertQuery, connection);
+            //    //addcommand.Parameters.AddWithValue("l", textBox6.Text);
+            //    //addcommand.Parameters.AddWithValue("w", textBox7.Text);
+            //    //addcommand.Parameters.AddWithValue("a", textBox8.Text);
+            //    //addcommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
+            //    await addcommand.ExecuteNonQueryAsync();
+            //    ClearAllTBs();
+            //    Form1_Load(sender, e);
+            //    connection.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message);
+            //}
+            //finally
+            //{
+            //    connection.Close();
+            //}
         }
 
         private void RejectButton_Click(object sender, EventArgs e)
@@ -268,7 +271,7 @@ namespace Database2
                         dataGridView1.Rows[row].Cells["Date_"].Value.ToString().ToLower().Contains(dateTime.Text.ToLower()) &&
                         dataGridView1.Rows[row].Cells["Rate_"].Value.ToString().ToLower().Contains(Tarif.Text.ToLower()))
                         dataGridView1.Rows[row].DefaultCellStyle.BackColor = Color.Red;
-                    else { MessageBox.Show("По вашему запросу билетов не найдено;("); break; }
+                   // else { MessageBox.Show("По вашему запросу билетов не найдено;("); break; }
                     }
                 
                 
@@ -286,29 +289,6 @@ namespace Database2
         
 
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTime_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
