@@ -78,7 +78,7 @@ namespace RDZavia
             Form1_Load(sender, e);
         }
 
-        private async void AddLibButton_Click(object sender, EventArgs e)
+        private void AddLibButton_Click(EventArgs e, object sender)
         {
             StatusForm frm2 = new StatusForm(this.label5.Text);
             frm2.Show();
@@ -137,7 +137,7 @@ namespace RDZavia
             }
         }
 
-        private async void DeleteButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
 
             StartForm frm2 = new StartForm();

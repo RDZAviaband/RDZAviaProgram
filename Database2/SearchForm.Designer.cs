@@ -120,7 +120,7 @@
             this.AddLibButton.TabIndex = 5;
             this.AddLibButton.Text = "Личный кабинет";
             this.AddLibButton.UseVisualStyleBackColor = true;
-            this.AddLibButton.Click += new System.EventHandler(this.AddLibButton_Click);
+
             // 
             // Search2
             // 
