@@ -143,25 +143,6 @@ namespace RDZavia
             StartForm frm2 = new StartForm();
             frm2.Show();
             this.Hide();
-            //try
-            //{
-            //    connection.Open();
-            //    MySqlCommand deletecommand = new MySqlCommand(SqlQueries.deleteQuery, connection);
-            //    deletecommand.Parameters.AddWithValue("id", dataGridView2.CurrentCell.RowIndex + 1);
-            //    await deletecommand.ExecuteNonQueryAsync();
-            //    connection.Close();
-            //    ClearAllTBs();
-            //    LibLoad();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error: " + ex.Message);
-            //}
-            //finally
-            //{
-            //    connection.Close();
-            //}
-
         }
         private void Search2_Click(object sender, EventArgs e)
         {
