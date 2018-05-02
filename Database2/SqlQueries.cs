@@ -1,4 +1,4 @@
-﻿namespace Database2
+﻿namespace RDZavia
 {
     public class SqlQueries
     {
@@ -7,8 +7,7 @@
         public static string connectQuery = "server=localhost; user=root; database=RDZAviaDB; password=0000; Sslmode= none";
      
         public static string SSQuery = "SELECT  Where_, Whence_ , Date_ ,Rate_ ,Price_ FROM DataGridOne;";
-        public static string SSQuery1 = "SELECT  Where_, Whence_ , Date_ ,Rate_ ,Price_ FROM DataGridSecond";
-        public static string SSQuery2 = "SELECT  UserName, SecondName , LastName,Sex,Data_  FROM Users;";
+       
 
 
         public static string insertQuery = "INSERT INTO Users(Login,Passwortd,Sex,UserName,SecondName,LastName,Data_) VALUES( @Login,@Passwortd,@Sex,@UserName,@SecondName,@LastName,@Data_)";

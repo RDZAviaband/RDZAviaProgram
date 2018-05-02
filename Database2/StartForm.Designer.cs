@@ -1,4 +1,4 @@
-﻿namespace Database2
+﻿namespace RDZavia
 {
     partial class StartForm
     {
@@ -98,7 +98,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = global::Database2.Properties.Resources.Logo;
+            this.pictureBox1.Image = global::RDZavia.Properties.Resources.Logo;
             this.pictureBox1.Location = new System.Drawing.Point(55, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(143, 148);

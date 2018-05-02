@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Database2.Properties {
+namespace RDZavia.Properties {
     using System;
     
     

@@ -1,4 +1,4 @@
-﻿namespace Database2
+﻿namespace RDZavia
 {
     partial class LoginForm
     {
@@ -97,7 +97,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Database2.Properties.Resources.SingIn;
+            this.pictureBox1.BackgroundImage = global::RDZavia.Properties.Resources.SingIn;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Location = new System.Drawing.Point(66, 24);
             this.pictureBox1.Name = "pictureBox1";

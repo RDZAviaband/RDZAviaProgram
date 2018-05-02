@@ -1,4 +1,4 @@
-﻿namespace Database2
+﻿namespace RDZavia
 {
     partial class StatusForm
     {

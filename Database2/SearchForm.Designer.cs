@@ -1,4 +1,4 @@
-﻿namespace Database2
+﻿namespace RDZavia
 {
     partial class SearchForm
     {
@@ -89,7 +89,7 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(741, 384);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+  
             // 
             // label6
             // 
@@ -252,7 +252,7 @@
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 35;
             this.label5.Text = "label5";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+ 
             // 
             // checkBox2
             // 

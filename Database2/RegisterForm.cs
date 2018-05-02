@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data;
-namespace Database2
+namespace RDZavia
 {
     public partial class RegisterForm : System.Windows.Forms.Form
     {

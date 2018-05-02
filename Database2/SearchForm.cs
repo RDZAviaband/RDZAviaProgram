@@ -1,12 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
-namespace Database2
+namespace RDZavia
 {
     public partial class SearchForm : System.Windows.Forms.Form
     {
@@ -50,7 +48,7 @@ namespace Database2
             try
             {
                 RDZAviaLoad();
-                LibLoad();
+
             }
             catch (Exception ex)
             {
@@ -69,28 +67,10 @@ namespace Database2
             MySqlCommandBuilder RDZAviaBuilder = new MySqlCommandBuilder(RDZAviaAdapter);
             RDZAviaAdapter.Fill(RDZAviaDataset);
             dataGridView1.DataSource = RDZAviaDataset.Tables[0];
-           
+
 
             connection.Close();
         }
-
-        public void LibLoad()
-        {
-            //LibDataset.Clear();
-            //LibAdapter = new MySqlDataAdapter(SqlQueries.SLQuery, connection);
-            //MySqlCommandBuilder LibBuilder = new MySqlCommandBuilder(LibAdapter);
-            //LibAdapter.Fill(LibDataset);
-            //dataGridView2.DataSource = LibDataset.Tables[0];
-
-            //connection.Close();
-        }
-
-
-
-
-
-
-
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
@@ -98,34 +78,12 @@ namespace Database2
             Form1_Load(sender, e);
         }
 
-       
-
         private async void AddLibButton_Click(object sender, EventArgs e)
         {
             StatusForm frm2 = new StatusForm(this.label5.Text);
             frm2.Show();
             this.Hide();
-            //connection.Open();
-            //try
-            //{
-            //    MySqlCommand addcommand = new MySqlCommand(SqlQueries.insertQuery, connection);
-            //    //addcommand.Parameters.AddWithValue("l", textBox6.Text);
-            //    //addcommand.Parameters.AddWithValue("w", textBox7.Text);
-            //    //addcommand.Parameters.AddWithValue("a", textBox8.Text);
-            //    //addcommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
-            //    await addcommand.ExecuteNonQueryAsync();
-            //    ClearAllTBs();
-            //    Form1_Load(sender, e);
-            //    connection.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error: " + ex.Message);
-            //}
-            //finally
-            //{
-            //    connection.Close();
-            //}
+
         }
 
         private void RejectButton_Click(object sender, EventArgs e)
@@ -144,13 +102,13 @@ namespace Database2
 
         }
 
-    
-
-        private  void ChangeButton_Click(object sender, EventArgs e)
-      
 
 
-            
+        private void ChangeButton_Click(object sender, EventArgs e)
+
+
+
+
         {
             if (dataGridView1.SelectedCells.Count > 0)
             {
@@ -163,7 +121,7 @@ namespace Database2
                 string c = Convert.ToString(selectedRow.Cells["Date_"].Value);
                 string d = Convert.ToString(selectedRow.Cells["Rate_"].Value);
                 string g = Convert.ToString(selectedRow.Cells["Price_"].Value);
-           
+
                 connection.Open();
                 MySqlCommand updatecommand = new MySqlCommand(SqlQueries.insertQuery1, connection);
 
@@ -174,15 +132,10 @@ namespace Database2
                 updatecommand.Parameters.AddWithValue("Rate_", d);
                 updatecommand.Parameters.AddWithValue("Price_", g);
 
-             updatecommand.ExecuteNonQuery();
+                updatecommand.ExecuteNonQuery();
                 connection.Close();
             }
-
-        
-
-       
-    }
-    
+        }
 
         private async void DeleteButton_Click(object sender, EventArgs e)
         {
@@ -208,30 +161,13 @@ namespace Database2
             //{
             //    connection.Close();
             //}
+
         }
-
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void Search2_Click(object sender, EventArgs e)
         {
-            Form1_Load(sender, e);
-        }
 
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridView1.Rows[0].Cells[0].ReadOnly = true;
-        }
-
-     
-       
-
-            
-
-        private void Search2_Click(object sender, EventArgs e) 
-        {
-            
-
-            if (Otkyda.Text != string.Empty && Kuda.Text != string.Empty  && Tarif.Text != string.Empty && dateTime.Text != string.Empty)
+            if (Otkyda.Text != string.Empty && Kuda.Text != string.Empty && Tarif.Text != string.Empty && dateTime.Text != string.Empty)
             {
                 ClearSearchResults();
                 for (int row = 0; row < dataGridView1.Rows.Count - 1; row++)
@@ -242,23 +178,18 @@ namespace Database2
                         dataGridView1.Rows[row].Cells["Date_"].Value.ToString().ToLower().Contains(dateTime.Text.ToLower()) &&
                         dataGridView1.Rows[row].Cells["Rate_"].Value.ToString().ToLower().Contains(Tarif.Text.ToLower()))
                         dataGridView1.Rows[row].DefaultCellStyle.BackColor = Color.Red;
-                   // else { MessageBox.Show("По вашему запросу билетов не найдено;("); break; }
-                    }
-                
-                
+                    // else { MessageBox.Show("По вашему запросу билетов не найдено;("); break; }
+                }
+
+
             }
             else
             {
                 MessageBox.Show("Заполните все поля и повторите запрос");
-                
+
             }
-
-            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
 
         }
     }
 }
+

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Database2
+namespace RDZavia
 {
     public partial class StartForm : System.Windows.Forms.Form
     {
