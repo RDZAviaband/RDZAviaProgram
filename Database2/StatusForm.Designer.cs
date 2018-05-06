@@ -32,14 +32,28 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Where_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Whence_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Where_,
+            this.Whence_,
+            this.Date_,
+            this.Rate_,
+            this.Price_});
             this.dataGridView1.Location = new System.Drawing.Point(422, 72);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(374, 239);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -73,6 +87,36 @@
             this.listBox1.TabIndex = 3;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // Where_
+            // 
+            this.Where_.HeaderText = "Куда";
+            this.Where_.Name = "Where_";
+            this.Where_.ReadOnly = true;
+            // 
+            // Whence_
+            // 
+            this.Whence_.HeaderText = "Откуда";
+            this.Whence_.Name = "Whence_";
+            this.Whence_.ReadOnly = true;
+            // 
+            // Date_
+            // 
+            this.Date_.HeaderText = "Дата";
+            this.Date_.Name = "Date_";
+            this.Date_.ReadOnly = true;
+            // 
+            // Rate_
+            // 
+            this.Rate_.HeaderText = "Тариф";
+            this.Rate_.Name = "Rate_";
+            this.Rate_.ReadOnly = true;
+            // 
+            // Price_
+            // 
+            this.Price_.HeaderText = "Цена";
+            this.Price_.Name = "Price_";
+            this.Price_.ReadOnly = true;
+            // 
             // StatusForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,5 +139,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Where_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Whence_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rate_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price_;
     }
 }

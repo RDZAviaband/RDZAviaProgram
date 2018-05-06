@@ -171,6 +171,13 @@ namespace RDZavia
             }
 
         }
+
+        private void AddLibButton_Click(object sender, EventArgs e)
+        {
+            StatusForm frm3 = new StatusForm(data);
+            frm3.Show();
+            this.Hide();
+        }
     }
 }
 

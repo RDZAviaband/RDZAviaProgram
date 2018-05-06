@@ -45,6 +45,7 @@
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.Tarif = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -56,7 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label9 = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -89,7 +89,6 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(741, 384);
             this.dataGridView1.TabIndex = 0;
-  
             // 
             // label6
             // 
@@ -120,7 +119,7 @@
             this.AddLibButton.TabIndex = 5;
             this.AddLibButton.Text = "Личный кабинет";
             this.AddLibButton.UseVisualStyleBackColor = true;
-
+            this.AddLibButton.Click += new System.EventHandler(this.AddLibButton_Click);
             // 
             // Search2
             // 
@@ -234,6 +233,15 @@
             this.panel1.Size = new System.Drawing.Size(749, 120);
             this.panel1.TabIndex = 24;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(457, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "label9";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -252,7 +260,6 @@
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 35;
             this.label5.Text = "label5";
- 
             // 
             // checkBox2
             // 
@@ -331,15 +338,6 @@
             this.button1.TabIndex = 34;
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(457, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "label9";
             // 
             // SearchForm
             // 

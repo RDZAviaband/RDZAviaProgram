@@ -52,28 +52,35 @@ namespace RDZavia
 
             if (count > 0)
             {
-              
-                RDZAviaAdapter = new MySqlDataAdapter(SqlQueries.SSQuery1, connection);
-            
-                RDZAviaAdapter.Fill(RDZAviaDataset);
-                dataGridView1.DataSource = RDZAviaDataset.Tables[0];
+                
 
+                MySqlConnection myConnection = new MySqlConnection(SqlQueries.connectQuery);
 
+                myConnection.Open();
+
+                string query = "SELECT Where_, Whence_ , Date_ ,Rate_ ,Price_ FROM DataGridSecond WHERE Login='" + data2 + "';";
+                MySqlCommand command = new MySqlCommand(query, myConnection);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                List<string[]> data = new List<string[]>();
+
+                while (reader.Read())
+                {
+                    data.Add(new string[3]);
+
+                    data[data.Count - 1][0] = reader[0].ToString();
+                    data[data.Count - 1][1] = reader[1].ToString();
+                    data[data.Count - 1][2] = reader[2].ToString();
+                }
+
+                reader.Close();
+
+                myConnection.Close();
+
+                foreach (string[] s in data)
+                    dataGridView1.Rows.Add(s);
             }
-            MySqlCommand cm = new MySqlCommand(SqlQueries.SSQuery2, connection);
-            MySqlDataReader reader = cm.ExecuteReader();
-            reader.Read();
-
-            string f = reader["UserName"].ToString();
-            string v = reader["SecondName"].ToString();
-            string c = reader["LastName"].ToString();
-            string x = reader["Sex"].ToString();
-            string z = reader["Data_"].ToString();
-
-
-            connection.Close();
-            listBox1.Items.AddRange(new object[] { "Логин:"+ data2 +"", "Имя:" + f + "", "Отчество:" + v + "", "Фамилия:" + c + "", "Пол:" + x + "",
-            "Дата рождения:"+ z +"",});
         }
         string data2;
      
