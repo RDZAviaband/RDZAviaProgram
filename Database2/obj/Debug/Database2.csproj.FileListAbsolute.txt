@@ -1,0 +1,88 @@
+C:\Users\User\Desktop\Database2\Database2\bin\Debug\Database2.exe.config
+C:\Users\User\Desktop\Database2\Database2\bin\Debug\Database2.exe
+C:\Users\User\Desktop\Database2\Database2\bin\Debug\Database2.pdb
+C:\Users\User\Desktop\Database2\Database2\bin\Debug\MySql.Data.dll
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.exe
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.pdb
+C:\Users\User\Desktop\Database2\Database2\obj\Debug\Database2.Form2.resources
+C:\Users\User\Desktop\Database3\Database2\bin\Debug\Database2.exe.config
+C:\Users\User\Desktop\Database3\Database2\obj\Debug\Database2.exe
+C:\Users\User\Desktop\Database3\Database2\obj\Debug\Database2.pdb
+C:\Users\User\Desktop\Database3\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Database3\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\User\Desktop\Database3\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\User\Desktop\Database3\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Database3\Database2\bin\Debug\Database2.exe
+C:\Users\User\Desktop\Database3\Database2\bin\Debug\Database2.pdb
+C:\Users\User\Desktop\Database3\Database2\bin\Debug\MySql.Data.dll
+C:\Users\User\Desktop\Desktop\Database3\Database2\bin\Debug\Database2.exe.config
+C:\Users\User\Desktop\Desktop\Database3\Database2\obj\Debug\Database2.exe
+C:\Users\User\Desktop\Desktop\Database3\Database2\obj\Debug\Database2.pdb
+C:\Users\User\Desktop\Desktop\Database3\Database2\bin\Debug\Database2.exe
+C:\Users\User\Desktop\Desktop\Database3\Database2\bin\Debug\Database2.pdb
+C:\Users\User\Desktop\Desktop\Database3\Database2\bin\Debug\MySql.Data.dll
+C:\Users\User\Desktop\Desktop\Database3\Database2\bin\Debug\MySql.Data.xml
+C:\Users\User\Desktop\Desktop\Database3\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\Desktop\Database3\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\User\Desktop\Desktop\Database3\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\User\Desktop\Desktop\Database3\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Новая папка (3)\Database2\bin\Debug\Database2.exe.config
+C:\Users\User\Desktop\Новая папка (3)\Database2\obj\Debug\Database2.exe
+C:\Users\User\Desktop\Новая папка (3)\Database2\obj\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\Database2.exe.config
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.exe
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\Database2.exe
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\MySql.Data.xml
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\Zemld\Desktop\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\Database2.exe.config
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.exe
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\Database2.exe
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\bin\Debug\MySql.Data.xml
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\Zemld\Desktop\Novaya_papka_3\Novaya_papka_3\Новая папка (3)\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\Database2.exe.config
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.exe
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\Database2.exe
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\MySql.Data.xml
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.Form1.resources
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\Zemld\Desktop\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\Database2.exe.config
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.exe
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.pdb
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.Form1.resources
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.Properties.Resources.resources
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\Database2.exe
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\Database2.pdb
+D:\Учёба\Учёба\3 курс\Проектирование БД\Database2\bin\Debug\MySql.Data.xml
+D:\ТП\Прога\Database2\bin\Debug\Database2.exe.config
+D:\ТП\Прога\Database2\obj\Debug\Database2.exe
+D:\ТП\Прога\Database2\obj\Debug\Database2.pdb
+D:\ТП\Прога\Database2\bin\Debug\Database2.exe
+D:\ТП\Прога\Database2\bin\Debug\Database2.pdb
+D:\ТП\Прога\Database2\bin\Debug\MySql.Data.xml
+D:\ТП\Прога\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+D:\ТП\Прога\Database2\obj\Debug\Database2.Form1.resources
+D:\ТП\Прога\Database2\obj\Debug\Database2.Form2.resources
+D:\ТП\Прога\Database2\obj\Debug\Database2.Properties.Resources.resources
+D:\ТП\Прога\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+D:\ТП\Прога\Database2\obj\Debug\Database2.Form3.resources
+D:\ТП\Прога\Database2\obj\Debug\Database2.Form4.resources
