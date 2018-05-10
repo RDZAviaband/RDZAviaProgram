@@ -86,3 +86,6 @@ D:\ТП\Прога\Database2\obj\Debug\Database2.Properties.Resources.resources
 D:\ТП\Прога\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
 D:\ТП\Прога\Database2\obj\Debug\Database2.Form3.resources
 D:\ТП\Прога\Database2\obj\Debug\Database2.Form4.resources
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\bin\Debug\Database2.exe.config
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.exe
+C:\Users\Дмитрий\Desktop\git_exercise1\Database2\obj\Debug\Database2.pdb
