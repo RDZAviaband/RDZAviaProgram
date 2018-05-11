@@ -8,15 +8,22 @@ using System.Windows.Forms;
 
 namespace Database2
 {
-    public partial class Form1 : Form
+    public partial class SearchForm : System.Windows.Forms.Form
     {
-        public Form1()
+        public SearchForm(string data)
         {
 
 
             InitializeComponent();
             SqlQueries queries = new SqlQueries();
+            this.data = data;
         }
+
+        public SearchForm()
+        {
+        }
+
+        string data;
 
         MySqlDataAdapter RDZAviaAdapter = new MySqlDataAdapter();
         MySqlDataAdapter LibAdapter = new MySqlDataAdapter();
@@ -39,8 +46,7 @@ namespace Database2
             Tarif.Items.Add("Эконом-класс");
             Tarif.Items.Add("Бизнес-класс");
             Tarif.Items.Add("Премиум-класс");
-
-
+            label5.Text = data;
             try
             {
                 RDZAviaLoad();
@@ -63,6 +69,8 @@ namespace Database2
             MySqlCommandBuilder RDZAviaBuilder = new MySqlCommandBuilder(RDZAviaAdapter);
             RDZAviaAdapter.Fill(RDZAviaDataset);
             dataGridView1.DataSource = RDZAviaDataset.Tables[0];
+           
+
             connection.Close();
         }
 
@@ -90,36 +98,34 @@ namespace Database2
             Form1_Load(sender, e);
         }
 
-        private void ClearAllTBs()
-        {
-            foreach (Control c in Controls)
-                if (c is TextBox)
-                    ((TextBox)c).Text = string.Empty;
-        }
+       
 
         private async void AddLibButton_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            try
-            {
-                MySqlCommand addcommand = new MySqlCommand(SqlQueries.insertQuery, connection);
-                //addcommand.Parameters.AddWithValue("l", textBox6.Text);
-                //addcommand.Parameters.AddWithValue("w", textBox7.Text);
-                //addcommand.Parameters.AddWithValue("a", textBox8.Text);
-                //addcommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
-                await addcommand.ExecuteNonQueryAsync();
-                ClearAllTBs();
-                Form1_Load(sender, e);
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            StatusForm frm2 = new StatusForm(this.label5.Text);
+            frm2.Show();
+            this.Hide();
+            //connection.Open();
+            //try
+            //{
+            //    MySqlCommand addcommand = new MySqlCommand(SqlQueries.insertQuery, connection);
+            //    //addcommand.Parameters.AddWithValue("l", textBox6.Text);
+            //    //addcommand.Parameters.AddWithValue("w", textBox7.Text);
+            //    //addcommand.Parameters.AddWithValue("a", textBox8.Text);
+            //    //addcommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
+            //    await addcommand.ExecuteNonQueryAsync();
+            //    ClearAllTBs();
+            //    Form1_Load(sender, e);
+            //    connection.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message);
+            //}
+            //finally
+            //{
+            //    connection.Close();
+            //}
         }
 
         private void RejectButton_Click(object sender, EventArgs e)
@@ -128,27 +134,6 @@ namespace Database2
         }
 
 
-
-        //private void Search2_Click(object sender, EventArgs e)
-        //{
-        //    //if (SearchTextBox2.Text != string.Empty)
-
-        //        ClearSearchResults();
-        //        for (int row = 0; row < dataGridView2.Rows.Count; row++)
-        //        {
-        //            for (int cell = 1; cell < 2; cell++)
-        //            {
-        //                if (dataGridView2.Rows[row].Cells[cell].Value.ToString().ToLower().Contains(SearchTextBox2.Text.ToLower()))
-        //                    dataGridView2.Rows[row].DefaultCellStyle.BackColor = Color.Red;
-        //            }
-        //        }
-        //        //SearchTextBox2.Clear();
-
-        //    else
-        //    {
-        //        MessageBox.Show("Empty field!");
-        //    }
-        //}
 
         private void ClearSearchResults()
         {
@@ -159,61 +144,50 @@ namespace Database2
 
         }
 
-        //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    textBox6.Clear();
-        //    ClearSearchResults();
-        //}
+    
 
-        //private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    foreach (DataGridViewRow row in dataGridView2.Rows)
-        //    {
-        //        row.DefaultCellStyle.BackColor = DefaultBackColor;
-        //        //SearchTextBox2.Clear();
-        //    }
-        //}
+        private  void ChangeButton_Click(object sender, EventArgs e)
+      
 
-        //private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    int Cell = dataGridView2.CurrentCell.RowIndex;
-        //    textBox6.Text = dataGridView2.Rows[Cell].Cells["l"].Value.ToString();
-        //    textBox7.Text = dataGridView2.Rows[Cell].Cells["w"].Value.ToString();
-        //    //textBox8.Text = dataGridView2.Rows[Cell].Cells["a"].Value.ToString();
-        //    //textBox1.Text = dataGridView2.Rows[Cell].Cells["RDZAvia_"].Value.ToString();
-        //}
 
-        private async void ChangeButton_Click(object sender, EventArgs e)
+            
         {
-            try
+            if (dataGridView1.SelectedCells.Count > 0)
             {
-                connection.Open();
-                MySqlCommand updatecommand = new MySqlCommand(SqlQueries.updateQuery, connection);
-                //updatecommand.Parameters.AddWithValue("l", textBox6.Text);
-                //updatecommand.Parameters.AddWithValue("w", textBox7.Text);
-                //updatecommand.Parameters.AddWithValue("a", textBox8.Text);
-                //updatecommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
-                //updatecommand.Parameters.AddWithValue("id", dataGridView2.CurrentCell.RowIndex + 1);
-                await updatecommand.ExecuteNonQueryAsync();
-                connection.Close();
-                ClearAllTBs();
-                Form1_Load(sender, e);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
+                int selectedrowindex = dataGridView1.SelectedCells[0].RowIndex;
 
+                DataGridViewRow selectedRow = dataGridView1.Rows[selectedrowindex];
+
+                string a = Convert.ToString(selectedRow.Cells["Where_"].Value);
+                string b = Convert.ToString(selectedRow.Cells["Whence_"].Value);
+                string c = Convert.ToString(selectedRow.Cells["Date_"].Value);
+                string d = Convert.ToString(selectedRow.Cells["Rate_"].Value);
+                string g = Convert.ToString(selectedRow.Cells["Price_"].Value);
+           
+                connection.Open();
+                MySqlCommand updatecommand = new MySqlCommand(SqlQueries.insertQuery1, connection);
+
+                updatecommand.Parameters.AddWithValue("Login", data);
+                updatecommand.Parameters.AddWithValue("Where_", a);
+                updatecommand.Parameters.AddWithValue("Whence_", b);
+                updatecommand.Parameters.AddWithValue("Date_", c);
+                updatecommand.Parameters.AddWithValue("Rate_", d);
+                updatecommand.Parameters.AddWithValue("Price_", g);
+
+             updatecommand.ExecuteNonQuery();
+                connection.Close();
+            }
+
+        
+
+       
+    }
+    
 
         private async void DeleteButton_Click(object sender, EventArgs e)
         {
 
-            Form2 frm2 = new Form2();
+            StartForm frm2 = new StartForm();
             frm2.Show();
             this.Hide();
             //try
@@ -245,7 +219,7 @@ namespace Database2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dataGridView1.Rows[0].Cells[0].ReadOnly = true;
         }
 
      
@@ -281,39 +255,10 @@ namespace Database2
 
             
         }
-        
-    
-        
 
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTime_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-      
         }
     }
 }

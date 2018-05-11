@@ -1,6 +1,6 @@
 ﻿namespace Database2
 {
-    partial class Form1
+    partial class SearchForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Panel panel2;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,13 +45,14 @@
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.Tarif = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.Otkyda = new System.Windows.Forms.ComboBox();
             this.Kuda = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             panel2 = new System.Windows.Forms.Panel();
@@ -71,7 +72,6 @@
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(749, 392);
             panel2.TabIndex = 26;
-            panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // dataGridView1
             // 
@@ -116,7 +116,7 @@
             this.AddLibButton.Name = "AddLibButton";
             this.AddLibButton.Size = new System.Drawing.Size(128, 25);
             this.AddLibButton.TabIndex = 5;
-            this.AddLibButton.Text = "Состояние брони";
+            this.AddLibButton.Text = "Личный кабинет";
             this.AddLibButton.UseVisualStyleBackColor = true;
             this.AddLibButton.Click += new System.EventHandler(this.AddLibButton_Click);
             // 
@@ -181,7 +181,6 @@
             this.label2.Size = new System.Drawing.Size(40, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Дата";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dateTime
             // 
@@ -196,7 +195,6 @@
             this.dateTime.Size = new System.Drawing.Size(97, 20);
             this.dateTime.TabIndex = 21;
             this.dateTime.TabStop = false;
-            this.dateTime.ValueChanged += new System.EventHandler(this.dateTime_ValueChanged);
             // 
             // Tarif
             // 
@@ -206,14 +204,14 @@
             this.Tarif.Name = "Tarif";
             this.Tarif.Size = new System.Drawing.Size(134, 21);
             this.Tarif.TabIndex = 23;
-            this.Tarif.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Otkyda);
@@ -232,35 +230,34 @@
             this.panel1.Size = new System.Drawing.Size(749, 120);
             this.panel1.TabIndex = 24;
             // 
-            // Otkyda
+            // label9
             // 
-            this.Otkyda.FormattingEnabled = true;
-            this.Otkyda.Location = new System.Drawing.Point(91, 57);
-            this.Otkyda.Margin = new System.Windows.Forms.Padding(2);
-            this.Otkyda.Name = "Otkyda";
-            this.Otkyda.Size = new System.Drawing.Size(108, 21);
-            this.Otkyda.TabIndex = 27;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(457, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "label9";
             // 
-            // Kuda
+            // label8
             // 
-            this.Kuda.FormattingEnabled = true;
-            this.Kuda.Location = new System.Drawing.Point(219, 57);
-            this.Kuda.Margin = new System.Windows.Forms.Padding(2);
-            this.Kuda.Name = "Kuda";
-            this.Kuda.Size = new System.Drawing.Size(108, 21);
-            this.Kuda.TabIndex = 26;
-            this.Kuda.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(568, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Текущий пользователь:";
             // 
-            // label4
+            // label5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe Print", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(-4, -2);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(260, 43);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Поиск авиабилетов";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(694, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "label5";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // button2
             // 
@@ -281,25 +278,34 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Заполните все обязательные поля";
             // 
-            // checkBox1
+            // Otkyda
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(247, 86);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 17);
-            this.checkBox1.TabIndex = 32;
-            this.checkBox1.Text = "Туда-Обратно";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.Otkyda.FormattingEnabled = true;
+            this.Otkyda.Location = new System.Drawing.Point(91, 57);
+            this.Otkyda.Margin = new System.Windows.Forms.Padding(2);
+            this.Otkyda.Name = "Otkyda";
+            this.Otkyda.Size = new System.Drawing.Size(108, 21);
+            this.Otkyda.TabIndex = 27;
             // 
-            // checkBox2
+            // Kuda
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(355, 86);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 17);
-            this.checkBox2.TabIndex = 33;
-            this.checkBox2.Text = "В одну сторону";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.Kuda.FormattingEnabled = true;
+            this.Kuda.Location = new System.Drawing.Point(219, 57);
+            this.Kuda.Margin = new System.Windows.Forms.Padding(2);
+            this.Kuda.Name = "Kuda";
+            this.Kuda.Size = new System.Drawing.Size(108, 21);
+            this.Kuda.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe Print", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(-4, -2);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(260, 43);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Поиск авиабилетов";
             // 
             // button1
             // 
@@ -311,11 +317,7 @@
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // form1BindingSource
-            // 
-            this.form1BindingSource.DataSource = typeof(Database2.Form1);
-            // 
-            // Form1
+            // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,8 +333,8 @@
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.ChangeButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Name = "Form1";
-            this.Text = "RDZ-Авиа  Бронирование";
+            this.Name = "SearchForm";
+            this.Text = "RDZAvia - Поиск";
             this.Load += new System.EventHandler(this.Form1_Load);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -363,10 +365,11 @@
         private System.Windows.Forms.BindingSource form1BindingSource;
         private System.Windows.Forms.ComboBox Otkyda;
         private System.Windows.Forms.ComboBox Kuda;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 

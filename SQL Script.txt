@@ -19,6 +19,16 @@ Rate_ varchar(25),
 Price_ varchar(25)
 ); 
 
+create table RDZAviaDB.Users(
+id integer primary key auto_increment,
+Login varchar(25),
+UserName varchar(25),
+SecondName varchar(25),
+LastName varchar(25),
+Passwortd varchar(25),
+Data_ varchar(25),
+Sex varchar(1) 
+);
 
 create table RDZAviaDB.Where_( 
 id integer primary key auto_increment, 
@@ -32,9 +42,10 @@ id_Where_ integer,
 primary key (id_DataGridOne,id_Where_) 
 ); 
 
-/*
+
 create table RDZAviaDBV.DataGridSecond( 
 id integer primary key auto_increment,
+Login  varchar(25),
 Where_  varchar(25),
 Whence_  varchar(25),  
 Date_ varchar(25), 
@@ -50,9 +61,9 @@ primary key (id_DataGridSecond,id_Where_)
 
 
 Alter table RDZAviaDB.prog
-add constraint fk_Where_id foreign key(id_Where_) references Where(id) on delete cascade,
+add constraint fk_Where_id foreign key(id_Where_) references Where_(id) on delete cascade,
 add constraint fk_DataGridSecond_id foreign key(id_DataGridSecond) references DataGridSecond(id) on delete cascade;
-*/
+
 
 
 /* Заполнение таблицы авиабилетов */

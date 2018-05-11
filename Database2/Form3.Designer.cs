@@ -90,7 +90,6 @@
             this.Controls.Add(this.button1);
             this.Name = "Form3";
             this.Text = "Form3";
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

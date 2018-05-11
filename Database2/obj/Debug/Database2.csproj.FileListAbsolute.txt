@@ -100,10 +100,6 @@ C:\Users\Zemld\Desktop\RDZavia\Database2\bin\Debug\Database2.exe.config
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.exe
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.pdb
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
-C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Form1.resources
-C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Form2.resources
-C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Form3.resources
-C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Form4.resources
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Properties.Resources.resources
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
 C:\Users\Zemld\Desktop\RDZavia\Database2\bin\Debug\Database2.exe
@@ -116,9 +112,44 @@ C:\Users\Дмитрий\Desktop\RDZavia\Database2\bin\Debug\Database2.exe
 C:\Users\Дмитрий\Desktop\RDZavia\Database2\bin\Debug\Database2.pdb
 C:\Users\Дмитрий\Desktop\RDZavia\Database2\bin\Debug\MySql.Data.dll
 C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
-C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.Form1.resources
-C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.Form2.resources
-C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.Form3.resources
-C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.Form4.resources
 C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.Properties.Resources.resources
 C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.StartForm.resources
+C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.SearchForm.resources
+C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.LoginForm.resources
+C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.StatusForm.resources
+C:\Users\Дмитрий\Desktop\RDZavia\Database2\obj\Debug\Database2.RegisterForm.resources
+C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.SearchForm.resources
+C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.StartForm.resources
+C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.LoginForm.resources
+C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.StatusForm.resources
+C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.RegisterForm.resources
+F:\Новая папка\RDZavia\Database2\bin\Debug\Database2.exe.config
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.exe
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.pdb
+F:\Новая папка\RDZavia\Database2\bin\Debug\Database2.exe
+F:\Новая папка\RDZavia\Database2\bin\Debug\Database2.pdb
+F:\Новая папка\RDZavia\Database2\bin\Debug\MySql.Data.xml
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.SearchForm.resources
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.LoginForm.resources
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.StatusForm.resources
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.RegisterForm.resources
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.Properties.Resources.resources
+F:\Новая папка\RDZavia\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+M:\Новая папка\RDZavia\Database2\bin\Debug\Database2.exe.config
+M:\Новая папка\RDZavia\Database2\obj\Debug\Database2.exe
+M:\Новая папка\RDZavia\Database2\obj\Debug\Database2.pdb
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\bin\Debug\Database2.exe.config
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.exe
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.pdb
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\bin\Debug\Database2.exe
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\bin\Debug\Database2.pdb
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\bin\Debug\MySql.Data.xml
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.SearchForm.resources
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.LoginForm.resources
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.StatusForm.resources
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.RegisterForm.resources
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\Дмитрий\Desktop\Новая папка\RDZavia\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
