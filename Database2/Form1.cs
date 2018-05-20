@@ -21,8 +21,7 @@ namespace Database2
         DataSet LibDataset = new DataSet();
         DataSet PagesDataset = new DataSet();
         MySqlConnection connection = new MySqlConnection(SqlQueries.connectQuery);
-        int RDZAviaNumber;
-
+       
 
         public void Form1_Load(object sender, EventArgs e)
         {
@@ -71,8 +70,8 @@ namespace Database2
             MySqlCommandBuilder PagesBuilder = new MySqlCommandBuilder(PagesAdapter);
             PagesAdapter.Fill(PagesDataset);
 
-            MySqlCommand count = new MySqlCommand(SqlQueries.PagesNumberQuery, connection);
-            RDZAviaNumber = Convert.ToInt32(count.ExecuteScalar());
+       
+       
 
             connection.Close();
         }
@@ -185,41 +184,41 @@ namespace Database2
         //    }
         //}
 
-        private void ClearSearchResults()
-        {
-            foreach (DataGridViewRow row in dataGridView1.Rows)
-            {
-                row.DefaultCellStyle.BackColor = Color.White;
-            }
-            foreach (DataGridViewRow row in dataGridView2.Rows)
-            {
-                row.DefaultCellStyle.BackColor = Color.White;
-            }
-        }
+        //private void ClearSearchResults()
+        //{
+        //    foreach (DataGridViewRow row in dataGridView1.Rows)
+        //    {
+        //        row.DefaultCellStyle.BackColor = Color.White;
+        //    }
+        //    foreach (DataGridViewRow row in dataGridView2.Rows)
+        //    {
+        //        row.DefaultCellStyle.BackColor = Color.White;
+        //    }
+        //}
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //SearchTextBox.Clear();
-            ClearSearchResults();
-        }
+        //private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    //SearchTextBox.Clear();
+        //    ClearSearchResults();
+        //}
 
-        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            foreach (DataGridViewRow row in dataGridView2.Rows)
-            {
-                row.DefaultCellStyle.BackColor = DefaultBackColor;
-                //SearchTextBox2.Clear();
-            }
-        }
+        //private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    foreach (DataGridViewRow row in dataGridView2.Rows)
+        //    {
+        //        row.DefaultCellStyle.BackColor = DefaultBackColor;
+        //        //SearchTextBox2.Clear();
+        //    }
+        //}
 
-        private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int Cell = dataGridView2.CurrentCell.RowIndex;
-            textBox6.Text = dataGridView2.Rows[Cell].Cells["l"].Value.ToString();
-            textBox7.Text = dataGridView2.Rows[Cell].Cells["w"].Value.ToString();
-            //textBox8.Text = dataGridView2.Rows[Cell].Cells["a"].Value.ToString();
-            //textBox1.Text = dataGridView2.Rows[Cell].Cells["RDZAvia_"].Value.ToString();
-        }
+        //private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    int Cell = dataGridView2.CurrentCell.RowIndex;
+        //    textBox6.Text = dataGridView2.Rows[Cell].Cells["l"].Value.ToString();
+        //    textBox7.Text = dataGridView2.Rows[Cell].Cells["w"].Value.ToString();
+        //    //textBox8.Text = dataGridView2.Rows[Cell].Cells["a"].Value.ToString();
+        //    //textBox1.Text = dataGridView2.Rows[Cell].Cells["RDZAvia_"].Value.ToString();
+        //}
 
         private async void ChangeButton_Click(object sender, EventArgs e)
         {
@@ -231,7 +230,7 @@ namespace Database2
                 updatecommand.Parameters.AddWithValue("w", textBox7.Text);
                 //updatecommand.Parameters.AddWithValue("a", textBox8.Text);
                 //updatecommand.Parameters.AddWithValue("RDZAvia_", textBox1.Text);
-                updatecommand.Parameters.AddWithValue("id", dataGridView2.CurrentCell.RowIndex + 1);
+                //updatecommand.Parameters.AddWithValue("id", dataGridView2.CurrentCell.RowIndex + 1);
                 await updatecommand.ExecuteNonQueryAsync();
                 connection.Close();
                 ClearAllTBs();
@@ -320,6 +319,16 @@ namespace Database2
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

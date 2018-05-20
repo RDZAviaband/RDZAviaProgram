@@ -106,3 +106,6 @@ C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Form3.resources
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Form4.resources
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.Properties.Resources.resources
 C:\Users\Zemld\Desktop\RDZavia\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache
+C:\Users\Zemld\Desktop\RDZavia\Database2\bin\Debug\Database2.exe
+C:\Users\Zemld\Desktop\RDZavia\Database2\bin\Debug\Database2.pdb
+C:\Users\Zemld\Desktop\RDZavia\Database2\bin\Debug\MySql.Data.dll
