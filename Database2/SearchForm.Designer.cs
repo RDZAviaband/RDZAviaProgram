@@ -57,6 +57,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Where_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Whence_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             panel2 = new System.Windows.Forms.Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,14 +82,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Where_,
+            this.Whence_,
+            this.Date_,
+            this.Rate_,
+            this.Price_});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(741, 384);
@@ -339,6 +353,36 @@
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Where_
+            // 
+            this.Where_.HeaderText = "Куда";
+            this.Where_.Name = "Where_";
+            this.Where_.ReadOnly = true;
+            // 
+            // Whence_
+            // 
+            this.Whence_.HeaderText = "Откуда";
+            this.Whence_.Name = "Whence_";
+            this.Whence_.ReadOnly = true;
+            // 
+            // Date_
+            // 
+            this.Date_.HeaderText = "Дата";
+            this.Date_.Name = "Date_";
+            this.Date_.ReadOnly = true;
+            // 
+            // Rate_
+            // 
+            this.Rate_.HeaderText = "Тариф";
+            this.Rate_.Name = "Rate_";
+            this.Rate_.ReadOnly = true;
+            // 
+            // Price_
+            // 
+            this.Price_.HeaderText = "Цена";
+            this.Price_.Name = "Price_";
+            this.Price_.ReadOnly = true;
+            // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,6 +438,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Where_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Whence_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rate_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price_;
     }
 }
 
