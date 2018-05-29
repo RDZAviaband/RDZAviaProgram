@@ -19,6 +19,16 @@ Rate_ varchar(25),
 Price_ varchar(25)
 ); 
 
+create table RDZAviaDB.Users(
+id integer primary key auto_increment,
+Login varchar(25),
+UserName varchar(25),
+SecondName varchar(25),
+LastName varchar(25),
+Passwortd varchar(25),
+Data_ varchar(25),
+Sex varchar(1) 
+);
 
 create table RDZAviaDB.Where_( 
 id integer primary key auto_increment, 
