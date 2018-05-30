@@ -140,3 +140,16 @@ F:\Новая папка\RDZavia\Database2\obj\Debug\RDZavia.SearchForm.resource
 F:\Новая папка\RDZavia\Database2\obj\Debug\RDZavia.LoginForm.resources
 F:\Новая папка\RDZavia\Database2\obj\Debug\RDZavia.StatusForm.resources
 F:\Новая папка\RDZavia\Database2\obj\Debug\RDZavia.RegisterForm.resources
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\bin\Debug\Database2.exe.config
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\Database2.exe
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\Database2.pdb
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\bin\Debug\Database2.exe
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\bin\Debug\Database2.pdb
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\bin\Debug\MySql.Data.xml
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\Database2.csprojResolveAssemblyReference.cache
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\RDZavia.SearchForm.resources
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\RDZavia.LoginForm.resources
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\RDZavia.StatusForm.resources
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\RDZavia.RegisterForm.resources
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\Database2.Properties.Resources.resources
+C:\Users\Дмитрий\Desktop\123\RDZavia\Database2\obj\Debug\Database2.csproj.GenerateResource.Cache

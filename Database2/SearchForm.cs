@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace RDZavia
 
 
             InitializeComponent();
+            this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
             SqlQueries queries = new SqlQueries();
             this.data = data;
         }
@@ -62,15 +65,34 @@ namespace RDZavia
 
         private void RDZAviaLoad()
         {
-            RDZAviaDataset.Clear();
-            RDZAviaAdapter = new MySqlDataAdapter(SqlQueries.SSQuery, connection);
-            MySqlCommandBuilder RDZAviaBuilder = new MySqlCommandBuilder(RDZAviaAdapter);
-            RDZAviaAdapter.Fill(RDZAviaDataset);
-            dataGridView1.DataSource = RDZAviaDataset.Tables[0];
-
-
+            this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             connection.Close();
+            MySqlConnection myConnection = new MySqlConnection(SqlQueries.connectQuery);
+            myConnection.Open();
+            string query = "SELECT Where_, Whence_ , Date_ ,Rate_ ,Price_ FROM DataGridOne";
+            MySqlCommand command = new MySqlCommand(query, myConnection);
+            MySqlDataReader reader = command.ExecuteReader();
+            List<string[]> data0 = new List<string[]>();
+
+            while (reader.Read())
+            {
+                data0.Add(new string[5]);
+
+                data0[data0.Count - 1][0] = reader[0].ToString();
+                data0[data0.Count - 1][1] = reader[1].ToString();
+                data0[data0.Count - 1][2] = reader[2].ToString();
+                data0[data0.Count - 1][3] = reader[3].ToString();
+                data0[data0.Count - 1][4] = reader[4].ToString();
+            }
+
+            reader.Close();
+
+            myConnection.Close();
+
+            foreach (string[] s in data0)
+                dataGridView1.Rows.Add(s);
         }
+    
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
@@ -134,6 +156,8 @@ namespace RDZavia
 
                 updatecommand.ExecuteNonQuery();
                 connection.Close();
+                MessageBox.Show("Билет успешно забронирован","", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
             }
         }
 
@@ -151,22 +175,28 @@ namespace RDZavia
             if (Otkyda.Text != string.Empty && Kuda.Text != string.Empty && Tarif.Text != string.Empty && dateTime.Text != string.Empty)
             {
                 ClearSearchResults();
-                for (int row = 0; row < dataGridView1.Rows.Count - 1; row++)
-                {
+                    for (int row = 0; row < dataGridView1.Rows.Count - 1; row++)
+                    {
 
                     if (dataGridView1.Rows[row].Cells["Where_"].Value.ToString().ToLower().Contains(Otkyda.Text.ToLower()) &&
                         dataGridView1.Rows[row].Cells["Whence_"].Value.ToString().ToLower().Contains(Kuda.Text.ToLower()) &&
                         dataGridView1.Rows[row].Cells["Date_"].Value.ToString().ToLower().Contains(dateTime.Text.ToLower()) &&
                         dataGridView1.Rows[row].Cells["Rate_"].Value.ToString().ToLower().Contains(Tarif.Text.ToLower()))
-                        dataGridView1.Rows[row].DefaultCellStyle.BackColor = Color.Red;
-                    // else { MessageBox.Show("По вашему запросу билетов не найдено;("); break; }
-                }
 
+                    { dataGridView1.Rows[row].DefaultCellStyle.BackColor = Color.Red; break; }
 
+                    else {
+                        MessageBox.Show("По вашему запросу ничего не найдено","", MessageBoxButtons.OK, MessageBoxIcon.Information); break;
+                    }
+                    }
+                
+              
             }
+         
+         
             else
             {
-                MessageBox.Show("Заполните все поля и повторите запрос");
+                MessageBox.Show("Заполните все поля и повторите запрос","", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -177,6 +207,16 @@ namespace RDZavia
             StatusForm frm3 = new StatusForm(data);
             frm3.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Для того чтобы воспользоваться поиском билетов нужно заполнить все поля поиска, программа в представленной таблице с билетами выделит красным ,варианты удовлетворяющие вашему запросу.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Для того чтобы забронировать билет, выделите нужный вам вариант в таблице и нажмите кнопку забронировать.Далее он будет доступен в вашем Личном кабинете", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

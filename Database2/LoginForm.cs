@@ -10,7 +10,7 @@ namespace RDZavia
         public LoginForm()
         {
             InitializeComponent();
-           
+
         }
 
         private void SingInButt_Click(object sender, EventArgs e)

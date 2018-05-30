@@ -22,7 +22,7 @@ namespace RDZavia
 
             InitializeComponent();
             this.data2 = data2;
-       
+            label5.Text = data2;
             MySqlDataAdapter RDZAviaAdapter = new MySqlDataAdapter();
             MySqlDataAdapter LibAdapter = new MySqlDataAdapter();
             MySqlDataAdapter PagesAdapter = new MySqlDataAdapter();
@@ -35,7 +35,31 @@ namespace RDZavia
             MySqlCommand comand = new MySqlCommand();
             MySqlDataAdapter adaptor = new MySqlDataAdapter();
             DataSet dataset = new DataSet();
-   
+
+            //MySqlConnection cn = new MySqlConnection(SqlQueries.connectQuery);
+            ////MySqlCommand cmd = new MySqlCommand("SELECT Sex,UserName,SecondName,LastName,Data_ FROM Users WHERE Login='" + data2 + ";", cn);
+
+            //listBox1.Items.Clear();
+
+            //cn.Open();
+            ////MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            //if (dataReader.HasRows)
+            //{
+            //    listBox1.BeginUpdate();
+            //    while (dataReader.Read())
+            //    {
+                   
+            //        listBox1.Items.Add(dataReader.GetString(2));
+            //        listBox1.Items.Add(dataReader.GetString(3));
+            //        listBox1.Items.Add(dataReader.GetString(4));
+            //        listBox1.Items.Add(dataReader.GetString(6));
+            //        listBox1.Items.Add(dataReader.GetString(7));
+            //    }
+            //    listBox1.EndUpdate();
+            //}
+
+            //cn.Close();
 
 
 
@@ -67,11 +91,13 @@ namespace RDZavia
 
                 while (reader.Read())
                 {
-                    data.Add(new string[3]);
+                    data.Add(new string[5]);
 
                     data[data.Count - 1][0] = reader[0].ToString();
                     data[data.Count - 1][1] = reader[1].ToString();
                     data[data.Count - 1][2] = reader[2].ToString();
+                    data[data.Count - 1][3] = reader[3].ToString();
+                    data[data.Count - 1][4] = reader[4].ToString();
                 }
 
                 reader.Close();
@@ -91,14 +117,6 @@ namespace RDZavia
             this.Hide();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        public void FIO ()
-        {
-   
-            }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -119,9 +137,23 @@ namespace RDZavia
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            StartForm frm3 = new StartForm();
+            frm3.Show();
+            this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Для отмены брони выберите нужный билет, и нажмите отменить бронь.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Личный кабинет позволяет управлять забранированными билетми, просматривать информацию пользователя, так же можно вернуться назад или сменить пользователя,соответствующими кнопками.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+       
     }
 }

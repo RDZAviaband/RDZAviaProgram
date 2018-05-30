@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Where_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Whence_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.AddLibButton = new System.Windows.Forms.Button();
@@ -45,11 +50,8 @@
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.Tarif = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Otkyda = new System.Windows.Forms.ComboBox();
@@ -57,11 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Where_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Whence_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rate_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
             panel2 = new System.Windows.Forms.Panel();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,6 +101,36 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(741, 384);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // Where_
+            // 
+            this.Where_.HeaderText = "Куда";
+            this.Where_.Name = "Where_";
+            this.Where_.ReadOnly = true;
+            // 
+            // Whence_
+            // 
+            this.Whence_.HeaderText = "Откуда";
+            this.Whence_.Name = "Whence_";
+            this.Whence_.ReadOnly = true;
+            // 
+            // Date_
+            // 
+            this.Date_.HeaderText = "Дата";
+            this.Date_.Name = "Date_";
+            this.Date_.ReadOnly = true;
+            // 
+            // Rate_
+            // 
+            this.Rate_.HeaderText = "Тариф";
+            this.Rate_.Name = "Rate_";
+            this.Rate_.ReadOnly = true;
+            // 
+            // Price_
+            // 
+            this.Price_.HeaderText = "Цена";
+            this.Price_.Name = "Price_";
+            this.Price_.ReadOnly = true;
             // 
             // label6
             // 
@@ -224,11 +252,8 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.checkBox2);
-            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Otkyda);
@@ -247,19 +272,10 @@
             this.panel1.Size = new System.Drawing.Size(749, 120);
             this.panel1.TabIndex = 24;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(457, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
-            this.label9.TabIndex = 37;
-            this.label9.Text = "label9";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(568, 9);
+            this.label8.Location = new System.Drawing.Point(524, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(129, 13);
             this.label8.TabIndex = 36;
@@ -269,31 +285,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(694, 9);
+            this.label5.Location = new System.Drawing.Point(659, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 35;
             this.label5.Text = "label5";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(355, 86);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 17);
-            this.checkBox2.TabIndex = 33;
-            this.checkBox2.Text = "В одну сторону";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(247, 86);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 17);
-            this.checkBox1.TabIndex = 32;
-            this.checkBox1.Text = "Туда-Обратно";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -304,6 +300,7 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "?";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -352,36 +349,18 @@
             this.button1.TabIndex = 34;
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Where_
+            // label9
             // 
-            this.Where_.HeaderText = "Куда";
-            this.Where_.Name = "Where_";
-            this.Where_.ReadOnly = true;
-            // 
-            // Whence_
-            // 
-            this.Whence_.HeaderText = "Откуда";
-            this.Whence_.Name = "Whence_";
-            this.Whence_.ReadOnly = true;
-            // 
-            // Date_
-            // 
-            this.Date_.HeaderText = "Дата";
-            this.Date_.Name = "Date_";
-            this.Date_.ReadOnly = true;
-            // 
-            // Rate_
-            // 
-            this.Rate_.HeaderText = "Тариф";
-            this.Rate_.Name = "Rate_";
-            this.Rate_.ReadOnly = true;
-            // 
-            // Price_
-            // 
-            this.Price_.HeaderText = "Цена";
-            this.Price_.Name = "Price_";
-            this.Price_.ReadOnly = true;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(433, 625);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 13);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "RDZAvia V2.0";
             // 
             // SearchForm
             // 
@@ -391,6 +370,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(943, 638);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(panel2);
             this.Controls.Add(this.AddLibButton);
@@ -431,18 +411,16 @@
         private System.Windows.Forms.BindingSource form1BindingSource;
         private System.Windows.Forms.ComboBox Otkyda;
         private System.Windows.Forms.ComboBox Kuda;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Where_;
         private System.Windows.Forms.DataGridViewTextBoxColumn Whence_;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date_;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rate_;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price_;
+        private System.Windows.Forms.Label label9;
     }
 }
 
